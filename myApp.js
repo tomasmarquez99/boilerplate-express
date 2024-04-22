@@ -9,10 +9,10 @@ app.listen(port, () => {
 
 app.get("/json", (req, res) => {
 
-if (process.env.MESSAGE_STYLE === 'allCaps'){
-  response = 'Hello json'.toUpperCase()
+if (process.env.MESSAGE_STYLE === 'uppercase'){
+  res.json({"message":"HELLO JSON"})
 } else {
-  response = 'Hello json'
+  res.json({"message":"hello json"})
 } })
 
 
