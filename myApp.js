@@ -8,14 +8,12 @@ app.listen(port, () => {
   });
 
 app.get("/json", (req, res) => {
-  var response = process.env.MESSAGE_STYLE
 
-if (response === 'uppercase'){
-  return res.json('HELLO JSON')
+if (process.env.MESSAGE_STYLE === 'allCaps'){
+  response = 'Hello json'.toUpperCase()
 } else {
-  return res.json('Hello json')
-} 
-})
+  response = 'Hello json'
+} })
 
 
 
